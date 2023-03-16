@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- I know I should be avoiding this... -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-cyan-900 text-white grid place-content-center">
+    <main class="max-w-7xl mx-6">
+        <h1 class="text-5xl my-5 font-semibold">Frontend Mentor Solutions</h1>
+        <p class="text-2xl">These are some of the different challenges and solutions I tried of the <a class="decoration-wavy decoration-white" href="https://www.frontendmentor.io/">Frontend Mentor</a> website. This page is meant to be updated in the future.</p>
+        <div id="shelf" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-col mt-24">
+    
+        </div>
+        <template id="card">
+            <article class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow">
+                <img class="object-cover rounded-t-lg">
+                <div class="m-4 flex flex-col">
+                    <h1 class="text-black font-serif font-semibold text-2xl mb-3"></h1>
+                    <p class="text-black mb-10 italic font-medium">Simple card</p>
+                    <div class="flex flex-row-reverse justify-between align-middle flex-wrap gap-4 justify-items-end">
+                        <a class="bg-cyan-700 hover:bg-cyan-300 font-semibold text-white px-3 py-2 rounded-lg shadow-sm transition-colors">My Solution 🡆</a>
+                        <a class="bg-cyan-700 hover:bg-cyan-300 font-semibold text-white px-3 py-2 rounded-lg shadow-sm transition-colors">See challenge 🡅</a>
+                    </div>
+                </div>
+            </article>
+        </template>
+    </main>
+</body>
+</html>
