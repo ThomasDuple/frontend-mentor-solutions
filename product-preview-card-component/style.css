@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;800&display=swap');
+
+:root {
+    /* Colors */
+    --primary: hsl(158, 36%, 37%);
+    --background: hsl(30, 38%, 92%);
+    --secondary: hsl(212, 21%, 14%);
+    --secondary-alt: hsl(228, 12%, 48%);
+    --neutral: hsl(0, 0%, 100%);
+
+    /* Font */
+    --text-size: 14px;
+    --text-family: 'Montserrat', sans-serif;
+    --heading-family: 'Fraunces', serif;
+
+    --gap: 1em;
+    --radius: calc(var(--gap) / 2);
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+#card {
+    display: grid;
+    background-color: var(--neutral);
+    grid-template-columns: 1fr;
+    font-family: var(--text-family);
+    margin: var(--gap);
+    max-width: min(calc(100vw - 1em), 700px);
+    border-radius: var(--radius);
+}
+
+#card-picture > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+#card-picture > img[data-screen="desktop"] {
+    display: none;
+}
+
+#card-picture > img[data-screen="mobile"] {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    #card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #card-picture img {
+        border-radius: var(--radius) 0 0 var(--radius);
+    }
+
+    #card-picture > img[data-screen="desktop"] {
+        display: block;
+    }
+    
+    #card-picture > img[data-screen="mobile"] {
+        display: none;
+    }
+}
+
+#card-content {
+    padding: calc(var(--gap) * 2);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 2);
+}
+
+#card-header {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--text-size);
+    letter-spacing: 0.3em;
+    color: var(--secondary-alt);
+}
+
+#card-title {
+    font-family: var(--heading-family);
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1em;
+    color: var(--secondary);
+}
+
+#card-description {
+    font-size: calc(var(--text-size) * 1.2);
+    line-height: 1.5em;
+    color: var(--secondary-alt);
+}
+
+#card-price-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+    align-items: center;
+    gap: var(--gap);
+}
+
+#card-price {
+    font-size: calc(var(--text-size) * 2.5);
+    font-family: var(--heading-family);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+#card-price-old {
+    font-size: calc(var(--text-size) * 1.2);
+    color: var(--secondary-alt);
+}
+
+#card-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    border: 0;
+    
+    fill: var(--neutral);
+    background-color: var(--primary);
+    color: var(--neutral);
+
+    font-size: calc(var(--text-size) * 1.3);
+    font-family: var(--text-family);
+    font-weight: 500;
+    border-radius: var(--radius);
+}

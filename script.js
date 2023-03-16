@@ -1,4 +1,11 @@
-const shelfElements = []
+const shelfElements = [
+    {
+        pic: "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/d0bm3lh8bp36gyi3jiop.jpg",
+        title: "Product preview card component",
+        linkChallenge: "https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa",
+        linkSolution: "./product-preview-card-component/index.html"
+    }
+]
 
 const shelf = document.querySelector("#shelf");
 const template = document.querySelector("#card");
